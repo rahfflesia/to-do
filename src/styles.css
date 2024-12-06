@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+     box-sizing: border-box;
+     margin: 0;
+     padding: 0;
+     font-family: "Jost", sans-serif;
+}
+
+:root {
+    font-size: 62.5%;
+    --primary-color: #111;
+    --secondary-color: #fff;
+}
+
+.root {
+    display: grid;
+    grid-template-areas: "header header header header header"
+                         "sidebar main main main main"
+                         "sidebar main main main main";
+    height: 100%;
+    gap: 10px;
+}
+
+.shadow {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+/* Header styles */
+
+.header {
+    grid-area: header;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    text-align: center;
+    padding: 1rem;
+}
+
+.header h1 {
+    font-size: 4rem;
+}
+
+.sidebar {
+    grid-area: sidebar;
+    color: var(--primary-color);
+    font-size: 2.4rem;
+    font-weight: bold;
+    padding: 10px;
+}
+
+.sidebar > * {
+    margin-bottom: 5px;
+}
+
+.inner-content {
+    grid-area: main;
+    padding: 10px;
+    font-size: 2rem;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+}
+
+.add-project {
+    font-size: 3rem;
+    display: flex;
+}
+
+.project, .add, .time{
+    cursor: pointer;
+}
+
+.add {
+    margin-left: 20px;
+}
+
+.project:hover, .time:hover, .add-project:hover {
+    background-color: rgba(194, 194, 194, 0.8);
+    border-radius: 1rem;
+}
+
+.tasks-container {
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.title {
+    font-size: 4rem;
+}
+
+.task {
+    border-radius: 2rem;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 3rem;
+    border-right: 0.5rem solid var(--primary-color);
+    font-size: 1.8rem;
+}
+
+.task:hover{
+    transform: scale(1.1);
+}
+
+.priority {
+    background-color: bisque;
+    border-radius: 5px;
+    padding: 0px 5px;
+}
+
+.icons img, .project-icons img {
+    width: 2.4rem;
+    height: 2.4rem;
+    cursor: pointer;
+}
+
+dialog {
+    border: none;
+    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.08), 0 2px 4px 0 rgba(0, 0, 0, 0.12);
+    left: 50%;
+    transform: translateX(-50%);
+    top: 30%;
+    padding: 1.5rem;
+}
+
+dialog > * {
+    margin-bottom: 1rem;
+}
+
+dialog p {
+    font-weight: bold;
+    font-size: 3rem;
+}
+
+dialog input {
+    width: 100%;
+    outline: none;
+    padding: 0.5rem 1rem;
+}
+
+dialog .buttons {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+dialog button {
+    padding: 0.5rem;
+}
+
+select {
+    padding: 0.5rem 1rem;
+    width: 100%;
+}
+
+.task-buttons {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+.click-to-add {
+    padding: 1rem;
+    border-radius: 1rem;
+    cursor: pointer;
+}
+
+.click-to-add:hover {
+    transform: scale(1.1);
+}
+
+.inner-content {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.inner-tasks-container > *{
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.task-details p{
+    font-size: 2.5rem;
+    font-weight: 400;
+}
+
+.task-details button {
+    width: 100%;
+}

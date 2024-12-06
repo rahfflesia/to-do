@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>To-Do</title>
+</head>
+<body>
+    <dialog class="project-add">
+        <p>Add new project</p>
+        <input type="text" placeholder="Name of the project" class="project-title">
+        <div class="buttons">
+            <button class="addTask">Add</button>
+            <button class="close">Cancel</button>
+        </div>
+    </dialog>
+    <dialog class="task-add">
+        <p>Add new task</p>
+        <input type="text" placeholder="Task" class="task-title" required>
+        <input type="text" placeholder="Short description" class="description" required>
+        <input type="date" class="date" required>
+        <select name="priority" id="priority">
+            <option value="Low">Low</option>
+            <option value="Medium">Medium</option>
+            <option value="High">High</option>
+        </select>
+        <div class="task-buttons">
+            <button class="add-task-button">Add task</button>
+            <button class="cancel-task-button">Cancel</button>
+        </div>
+    </dialog>
+    <dialog class="task-details">
+        <p>Task details</p>
+        <p class="details-title"></p>
+        <p class="details-description"></p>
+        <p class="details-duedate"></p>
+        <p class="details-priority"></p>
+        <button class="close-details">Close</button>
+    </dialog>
+    <dialog class="edit-task">
+        <p>Edit task</p>
+        <input type="text" class="edit-title">
+        <input type="text" class="edit-desc">
+        <input type="date" class="edit-date">
+        <select name="priority" id="edit-priority">
+            <option value="Low">Low</option>
+            <option value="Medium">Medium</option>
+            <option value="High">High</option>
+        </select>
+        <div class="btns">
+            <button class="edit-task-button">Edit</button>
+            <button class="close-edit-task-dialog">Close</button>
+        </div>
+    </dialog>
+    <div class="root">
+        <div class="header">
+            <h1>To-Do</h1>
+        </div>
+        <div class="sidebar shadow">
+            <div class="add-project">
+                <p>My projects</p>
+                <p class="add">+</p>
+            </div>
+        </div>
+        <div class="inner-content shadow">
+            <div class="tasks-container">
+                <p class="title">No project selected</p>
+                <div class="click-to-add shadow">
+                    <p>Add task</p>
+                </div>
+            </div>
+            <div class="inner-tasks-container">
+            </div>
+        </div>
+    </div>
+</body>
+</html>
