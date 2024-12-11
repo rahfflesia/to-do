@@ -11,6 +11,8 @@
   "description": "",
   "devDependencies": {
     "css-loader": "^7.1.2",
+    "eslint": "^9.16.0",
+    "globals": "^15.13.0",
     "html-loader": "^5.1.0",
     "html-webpack-plugin": "^5.6.0",
     "style-loader": "^4.0.0",
